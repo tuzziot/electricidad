@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Tuzzi | Electricista Habilitado Cat. 2 en Córdoba</title>
+    <meta name="description" content="Electricista habilitado Categoría 2 en Córdoba. Certificados ERSeP, PCT EPEC, informes eléctricos para Bomberos, proyectos eléctricos y automatización. Matrícula 2879/2">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 L90 50 L50 90 L10 50 Z" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            opacity: 0.95;
+        }
+
+        .hero .matricula {
+            font-size: 1em;
+            opacity: 0.85;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+        }
+
+        .btn-primary {
+            background-color: #25D366;
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #20bd5a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: #1a472a;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: transparent;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            background-color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .badges-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #1a472a;
+            font-weight: 600;
+        }
+
+        .badge-icon {
+            font-size: 2em;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1a472a;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid #1a472a;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .service-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: #1a472a;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .service-price {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #2d5a3d;
+            margin-top: 15px;
+        }
+
+        .service-includes {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        /* Specialty Section */
+        .specialty {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 60px 20px;
+            margin: 60px 0;
+        }
+
+        .specialty-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .specialty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .specialty-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #1a472a;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .specialty-item h4 {
+            color: #1a472a;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        /* Coverage Section */
+        .coverage {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .coverage h2 {
+            color: #1a472a;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .coverage-areas {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .area {
+            background: #f8f9fa;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #1a472a;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+            color: white;
+            padding: 80px 20px;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0d2818;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero .subtitle {
+                font-size: 1.1em;
+            }
+            .section-title {
+                font-size: 1.8em;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>David Tuzzi</h1>
+            <p class="subtitle">Electricista Habilitado Categoría 2</p>
+            <p class="matricula">Matrícula 2879/2</p>
+            <p style="font-size: 1.1em; margin-top: 20px;">Certificaciones • Proyectos eléctricos • Automatización</p>
+            
+            <div class="cta-buttons">
+                <a href="https://wa.me/543541389476?text=Hola%20David,%20necesito%20un%20presupuesto" class="btn btn-primary" target="_blank">
+                    📱 Solicitar Presupuesto
+                </a>
+                <a href="#servicios" class="btn btn-secondary">
+                    Ver Servicios
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust Badges -->
+    <div class="trust-badges">
+        <div class="badges-container">
+            <div class="badge">
+                <span class="badge-icon">✓</span>
+                <span>Matrícula Habilitante</span>
+            </div>
+            <div class="badge">
+                <span class="badge-icon">✓</span>
+                <span>Trabajos Certificados</span>
+            </div>
+            <div class="badge">
+                <span class="badge-icon">🛡️</span>
+                <span>Garantía Profesional</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="container" id="servicios">
+        <h2 class="section-title">Servicios Profesionales</h2>
+        <p class="section-subtitle">Soluciones eléctricas certificadas para tu hogar o negocio</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                
+                <h3>Certificado ERSeP</h3>
+                <p>Instalaciones aptas para viviendas y comercios ante ERSeP. Incluye relevamiento técnico y correcciones menores para garantizar la aprobación.</p>
+                <div class="service-price">Desde $75.000</div>
+                <div class="service-includes">Para instalaciones menores a 10Kva</div>
+            </div>
+
+            <div class="service-card">
+                
+                <h3>PCT – EPEC</h3>
+                <p>Documentación completa requerida para el Presupuesto de Carga Total de EPEC.</p>
+                <div class="service-price">Desde $450.000</div>
+                <div class="service-includes">Para módulos de hasta 4 medidores</div>
+            </div>
+
+            <div class="service-card">
+                
+                <h3>Informe Eléctrico Bomberos</h3>
+                <p>Informe técnico profesional exigido para habilitaciones comerciales y renovaciones. Cumplimos con todas las normativas vigentes.</p>
+                <div class="service-price">Desde $250.000</div>
+                <div class="service-includes">Para instalaciones hasta 10Kva</div>
+            </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 80px;">Paquetes Recomendados</h2>
+        <p class="section-subtitle">Ahorrá tiempo y dinero con nuestros combos especiales</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                
+                <h3>Habilitación Rápida</h3>
+                <p>Certificado ERSeP + revisión general completa. Perfecto para alquileres y locales comerciales que necesitan habilitación urgente.</p>
+                <div class="service-price">Consultar precio</div>
+                <div class="service-includes">Según potencia instalada (Kva)</div>
+            </div>
+
+            <div class="service-card">
+                
+                <h3>EPEC + Bomberos</h3>
+                <p>PCT completo + Informe eléctrico listo para presentar. Todo en uno para tu habilitación comercial o residencial.</p>
+                <div class="service-price">Consultar precio</div>
+                <div class="service-includes">Según características del proyecto</div>
+            </div>
+
+            <div class="service-card">
+                
+                <h3>Proyecto + Tablero</h3>
+                <p>Proyecto eléctrico profesional + tablero armado, cableado y probado. Solución completa llave en mano con garantía.</p>
+                <div class="service-price">Consultar precio</div>
+                <div class="service-includes">Según complejidad y materiales</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Specialty Section -->
+    <div class="specialty">
+        <div class="specialty-content">
+            <h2 class="section-title">Mi Especialidad</h2>
+            <p class="section-subtitle">Experiencia en automatización y sistemas eléctricos avanzados</p>
+            
+            <div class="specialty-grid">
+                <div class="specialty-item">
+                    <h4>Tableros Eléctricos</h4>
+                    <p>Diseño y armado de tableros eléctricos y automatismos para cisternas, con mando a distancia o telemetria.</p>
+                </div>
+                
+                <div class="specialty-item">
+                    <h4>Sistemas de Bombeo</h4>
+                    <p>Instalación de protecciones, bombas y sistemas de presurización automáticos para edificios y viviendas.</p>
+                </div>
+                
+                <div class="specialty-item">
+                    <h4>Telemetría e IoT</h4>
+                    <p>Soluciones de control remoto, telemetría y automatización inteligente para gestión eficiente de instalaciones.</p>
+                </div>
+                
+                <div class="specialty-item">
+                    <h4>Trabajos Certificados</h4>
+                    <p>Todos los trabajos quedan listos para inspección y aprobación de organismos oficiales. Garantía profesional.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coverage Section -->
+    <div class="coverage">
+        <h2>Zona de Cobertura</h2>
+        <p style="color: #666; font-size: 1.1em; margin-bottom: 20px;">Servicio en toda la provincia de Córdoba</p>
+        <div class="coverage-areas">
+            <div class="area">📍 Villa Carlos Paz</div>
+            <div class="area">📍 Córdoba Capital</div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact">
+        <div class="contact-content">
+            <h2>¿Necesitás un Electricista?</h2>
+            <p style="font-size: 1.2em; opacity: 0.9;">Contactame ahora para un presupuesto sin compromiso</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span style="font-size: 2.5em;">📧</span>
+                    <a href="mailto:davidtuzzi@gmail.com">davidtuzzi@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span style="font-size: 2.5em;">📱</span>
+                    <a href="https://wa.me/543541389476" target="_blank">WhatsApp: 3541 389476</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px;">
+                <a href="https://wa.me/543541389476?text=Hola%20David,%20necesito%20información%20sobre%20tus%20servicios" class="btn btn-primary" target="_blank" style="font-size: 1.2em; padding: 18px 40px;">
+                    Solicitar Presupuesto por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 David Tuzzi - Electricista Habilitado Categoría 2 | Matrícula 2879/2</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">Servicio profesional en toda la provincia de Córdoba</p>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/543541389476?text=Hola%20David,%20necesito%20un%20presupuesto" class="whatsapp-float" target="_blank">
+        💬
+    </a>
+
+</body>
+</html>
